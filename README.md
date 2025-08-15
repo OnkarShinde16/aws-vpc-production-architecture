@@ -59,6 +59,9 @@ Create a VPC (e.g., `10.0.0.0/16`) with 2 public and 2 private subnets (spread a
 Create a Launch Template that installs Python and serves a simple page on **port 8000**.
 
 ![Step 4](images/4 create launch template.png)
+
+---
+
 ## 5) Auto Scaling Group (ASG)
 
 Create an ASG spanning the private subnets (**min=2, desired=2, max=4**).
@@ -123,6 +126,3 @@ ssh -i aws_login.pem ubuntu@<bastion-public-ip>
 
 # From Bastion, SSH to a Private EC2 (use its private IP)
 ssh -i aws_login.pem ubuntu@10.0.x.x
-
-```bash
-
